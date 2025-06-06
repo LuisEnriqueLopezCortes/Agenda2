@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">Agenda2</string>
+
+    <!--MainActivity-->
+    <string name="Btn_Login">Login</string>
+    <string name="Btn_Registro">Registro</string>
+
+    <!--Actividad Registro-->
+    <string name="CrearCuentaTXT">Crear una Cuenta</string>
+    <string name="NombreEt">Nombre</string>
+    <string name="CorreoEt">Correo Electronico</string>
+
+    <string name="ApellidoEt">Apellido</string>
+    <string name="TelefonoEt">Teléfono</string>
+    <string name="AliasEt">Alias o Nickname</string>
+    <string name="AvatarEt">Seleccionar Imagen de Perfil</string>
+    <string name="btnSeleccionarImagen">Subir Imagen</string>
+
+    <string name="ContraseñaEt">Contraseña</string>
+    <string name="ConfirmarContraseñaEt">Confirmar contraseña</string>
+    <string name="RegistrarUsuario">Registrar</string>
+    <string name="TengounacuentaTXT">Tengo una cuenta</string>
+
+    <!--ACTIVIDAD LOGIN-->
+    <string name="IniciarSesionTXT">Iniciar sesión</string>
+    <string name="CorreoLogin">Correo</string>
+    <string name="PassLogin">Contraseña</string>
+    <string name="Btn_Logeo">Ingresar</string>
+    <string name="UsuarioNuevoTXT">¿No tienes una cuenta?. Regístrate</string>
+
+    <!--MENÚ PRINCIPAL-->
+    <string name="BienvenidoPrincipal">Bienvenido(a)</string>
+    <string name="UidPrincipal"> -- </string>
+    <string name="NombresPrincipal"> -- </string>
+    <string name="CorreoPrincipal"> -- </string>
+    <string name="EstadoCuentaPrincipal">No verificado</string>
+
+    <string name="AgregarNotas">Agregar</string>
+    <string name="ListarNotas">Mis Notas</string>
+    <string name="Importantes">Importantes</string>
+    <string name="Contactos">Contactos</string>
+    <string name="AcercaDe">Acerca De</string>
+    <string name="CerrarSesion">Cerrar Sesion</string>
+
 </resources>

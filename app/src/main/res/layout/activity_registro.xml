@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,208 @@
     android:layout_height="match_parent"
     tools:context=".Registro">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/CrearCuentaTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:gravity="center">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/NombreEt"
+                android:hint="@string/NombreEt"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="14dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icono_nombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/ApellidoEt"
+                android:hint="@string/ApellidoEt"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="14dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icono_nombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/TelefonoEt"
+                android:hint="@string/TelefonoEt"
+                android:inputType="phone"
+                android:padding="14dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icono_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/AliasEt"
+                android:hint="@string/AliasEt"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="14dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icono_nombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/CorreoEt"
+                android:hint="@string/CorreoEt"
+                android:inputType="textEmailAddress"
+                android:padding="14dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icono_correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/avatarImageView"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/icono_nombres"
+            android:contentDescription="@string/AvatarEt"
+            android:clickable="true"
+            android:focusable="true">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/btnSeleccionarImagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AvatarEt"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:paddingTop="8dp">
+
+        </Button>
+        
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false">
+
+
+            <EditText
+                android:id="@+id/ContraseñaEt"
+                android:hint="@string/ContraseñaEt"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icono_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/ConfirmarContraseñaEt"
+                android:hint="@string/ConfirmarContraseñaEt"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icono_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/RegistrarUsuario"
+            android:text="@string/RegistrarUsuario"
+            android:layout_marginTop="15dp"
+
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/TengounacuentaTXT"
+            android:text="@string/TengounacuentaTXT"
+
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

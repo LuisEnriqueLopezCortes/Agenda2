@@ -67,10 +67,31 @@ class Listar_Notas : AppCompatActivity() {
     }
 
     private fun editarNota(nota: NotaAgenda) {
-        // TODO: Abrir nueva activity o mostrar dialogo para editar
+
     }
 
     private fun eliminarNota(nota: NotaAgenda) {
-        // TODO: Hacer llamada DELETE al backend y refrescar lista
+        AlertDialog.Builder(this)
+            .setTitle("¿Eliminar nota?")
+            .setMessage("¿Estás seguro de que deseas eliminar esta nota?")
+            .setPositiveButton("Sí") { _, _ ->
+                RetrofitClient.apiService.eliminarNota(nota.id).enqueue(object : Callback<Void> {
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                        if (response.isSuccessful) {
+                            Toast.makeText(this@Listar_Notas, "Nota eliminada", Toast.LENGTH_SHORT).show()
+                            listaNotas.remove(nota)
+                            adapter.notifyDataSetChanged()
+                        } else {
+                            Toast.makeText(this@Listar_Notas, "Error al eliminar", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                        Toast.makeText(this@Listar_Notas, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            }
+            .setNegativeButton("Cancelar", null)
+            .show()
     }
 }

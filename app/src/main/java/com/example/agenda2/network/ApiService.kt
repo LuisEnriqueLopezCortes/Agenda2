@@ -16,6 +16,7 @@ import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.PartMap
 import retrofit2.http.GET
+import retrofit2.http.DELETE
 import retrofit2.http.Body
 import retrofit2.http.Part
 
@@ -66,4 +67,7 @@ interface ApiService {
 
     @GET("/api/notas/usuario/{id}")
     fun getNotasUsuario(@Path("id") id: Int): Call<List<NotaAgenda>>
+
+    @DELETE("/api/notas/{id}")
+    fun eliminarNota(@Path("id") id: Int): Call<Void>
 }

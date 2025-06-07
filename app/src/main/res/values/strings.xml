@@ -107,4 +107,9 @@
     <string name="tvFecha">Fecha</string>
 
     <string name="recyclerNotas">Rec</string>
+
+    <string name="etTitulo">Titulo</string>
+    <string name="etDescripcion">Descripcion</string>
+    <string name="etFecha">Fecha</string>
+    <string name="etbtnGuardar">Guardar</string>
 </resources>

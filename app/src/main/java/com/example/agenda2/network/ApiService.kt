@@ -70,4 +70,14 @@ interface ApiService {
 
     @DELETE("/api/notas/{id}")
     fun eliminarNota(@Path("id") id: Int): Call<Void>
+
+    @FormUrlEncoded
+    @PUT("/api/notas/{id}")
+    fun editarNota(
+        @Path("id") id: Int,
+        @Field("titulo") titulo: String,
+        @Field("descripcion") descripcion: String,
+        @Field("fecha_evento") fecha_evento: String
+    ): Call<Void>
+
 }

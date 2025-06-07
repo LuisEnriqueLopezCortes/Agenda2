@@ -11,6 +11,11 @@ import com.example.agenda2.R
 import com.example.agenda2.model.NotaAgenda
 import com.example.agenda2.network.RetrofitClient
 import android.widget.Toast
+import android.view.LayoutInflater
+import android.widget.EditText
+import android.net.Uri
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import java.io.File
 
 import androidx.appcompat.app.AlertDialog
 import retrofit2.Call
@@ -66,8 +71,44 @@ class Listar_Notas : AppCompatActivity() {
             .show()
     }
 
-    private fun editarNota(nota: NotaAgenda) {
 
+
+    private fun editarNota(nota: NotaAgenda) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_editar_nota, null)
+        val tituloEdit = dialogView.findViewById<EditText>(R.id.etTitulo)
+        val descEdit = dialogView.findViewById<EditText>(R.id.etDescripcion)
+        val fechaEdit = dialogView.findViewById<EditText>(R.id.etFecha)
+
+        tituloEdit.setText(nota.titulo)
+        descEdit.setText(nota.descripcion)
+        fechaEdit.setText(nota.fecha_evento)
+
+        AlertDialog.Builder(this)
+            .setTitle("Editar Nota")
+            .setView(dialogView)
+            .setPositiveButton("Guardar") { _, _ ->
+                val nuevoTitulo = tituloEdit.text.toString()
+                val nuevaDescripcion = descEdit.text.toString()
+                val nuevaFecha = fechaEdit.text.toString()
+
+                RetrofitClient.apiService.editarNota(
+                    nota.id,
+                    nuevoTitulo,
+                    nuevaDescripcion,
+                    nuevaFecha
+                ).enqueue(object : Callback<Void> {
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                        Toast.makeText(this@Listar_Notas, "Nota actualizada", Toast.LENGTH_SHORT).show()
+                        cargarNotas(nota.id_usuario) // refrescar
+                    }
+
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                        Toast.makeText(this@Listar_Notas, "Error al actualizar", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            }
+            .setNegativeButton("Cancelar", null)
+            .show()
     }
 
     private fun eliminarNota(nota: NotaAgenda) {

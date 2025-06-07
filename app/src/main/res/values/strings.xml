@@ -31,15 +31,14 @@
     <!--MENÚ PRINCIPAL-->
     <string name="BienvenidoPrincipal">Bienvenido(a)</string>
     <string name="UidPrincipal"> -- </string>
-    <string name="NombresPrincipal"> -- </string>
+    <string name="AliasPrincipal"> -- </string>
     <string name="CorreoPrincipal"> -- </string>
-    <string name="EstadoCuentaPrincipal">No verificado</string>
 
     <string name="AgregarNotas">Agregar</string>
     <string name="ListarNotas">Mis Notas</string>
-    <string name="Importantes">Importantes</string>
-    <string name="Contactos">Contactos</string>
+    <string name="Archivados">Archivados</string>
+    <string name="Perfil">Perfil</string>
     <string name="AcercaDe">Acerca De</string>
-    <string name="CerrarSesion">Cerrar Sesion</string>
+    <string name="CerrarSesion">Salir</string>
 
 </resources>

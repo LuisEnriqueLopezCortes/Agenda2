@@ -69,4 +69,37 @@
     <string name="Perfil_EtRNuevoPass">Repetir nueva contraseña</string>
     <string name="Perfil_BtnActualizarPass">Actualizar contraseña</string>
 
+    <!-- Agregar Contacto -->
+    <string name="Titulo">Título de la nota</string>
+    <string name="Descripcion">Descripción</string>
+    <string name="Btn_Calendario">Seleccionar Fecha</string>
+    <string name="Fecha">Fecha del evento</string>
+    <string name="Estado">Estado de la nota (pendiente/finalizado)</string>
+    <string name="Fecha_hora_actual_TXT">Fecha de creación:</string>
+    <string name="Fecha_hora_actual">Fecha actual</string>
+    <string name="Uid_Usuario">ID del Usuario</string>
+    <string name="Correo_usuario">Correo del Usuario</string>
+    <string name="Btn_GuardarNota">Guardar Nota</string>
+
+    <string name="Btn_SeleccionarImagenAgenda">Seleccionar Imagen</string>
+    <string name="ImagenPreviewAgenda">Imagen</string>
+    <!-- Arrays para los spinners -->
+    <string-array name="tipo_nota_array">
+        <item>Nota</item>
+        <item>Tarea</item>
+        <item>Cita</item>
+    </string-array>
+
+    <string-array name="prioridad_array">
+        <item>Alta</item>
+        <item>Media</item>
+        <item>Baja</item>
+    </string-array>
+
+    <string-array name="estados_array">
+        <item>Pendiente</item>
+        <item>Finalizado</item>
+
+    </string-array>
+
 </resources>

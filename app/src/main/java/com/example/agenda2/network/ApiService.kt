@@ -6,6 +6,7 @@ import okhttp3.ResponseBody
 import com.example.agenda2.model.Respuesta
 import com.example.agenda2.model.RespuestaActualizacion
 import com.example.agenda2.model.ActualizarPasswordRequest
+import  com.example.agenda2.model.NotaAgenda
 import retrofit2.Call
 import retrofit2.http.Multipart
 import retrofit2.http.Field
@@ -55,4 +56,11 @@ interface ApiService {
     fun actualizarPassword(
         @Body request: ActualizarPasswordRequest
     ): Call<Respuesta>
+
+    @Multipart
+    @POST("/api/notas/agregarNota")
+    fun agregarNota(
+        @PartMap data: Map<String, @JvmSuppressWildcards RequestBody>,
+        @Part imagen: MultipartBody.Part?
+    ): Call<NotaAgenda>
 }

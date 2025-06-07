@@ -63,4 +63,7 @@ interface ApiService {
         @PartMap data: Map<String, @JvmSuppressWildcards RequestBody>,
         @Part imagen: MultipartBody.Part?
     ): Call<NotaAgenda>
+
+    @GET("/api/notas/usuario/{id}")
+    fun getNotasUsuario(@Path("id") id: Int): Call<List<NotaAgenda>>
 }

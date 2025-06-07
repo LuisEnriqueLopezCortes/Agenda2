@@ -102,4 +102,9 @@
 
     </string-array>
 
+    <string name="tvTitulo">Titulo</string>
+    <string name="tvDescripcion">Desc</string>
+    <string name="tvFecha">Fecha</string>
+
+    <string name="recyclerNotas">Rec</string>
 </resources>

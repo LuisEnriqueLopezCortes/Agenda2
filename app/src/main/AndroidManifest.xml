@@ -26,7 +26,7 @@
             android:name=".Perfil.Perfil_Usuario"
             android:exported="false" />
         <activity
-            android:name=".ListaNotas.Listar_Notas"
+            android:name=".ListarNotas.Listar_Notas"
             android:exported="false" />
         <activity
             android:name=".AgregarNota.Agregar_Nota"

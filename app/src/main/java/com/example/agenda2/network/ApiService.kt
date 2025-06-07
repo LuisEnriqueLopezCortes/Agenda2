@@ -22,7 +22,7 @@ import retrofit2.http.Part
 
 interface ApiService {
     @Multipart
-    @POST("api/register")
+    @POST("/api/register")
     fun registerUser(
         @Part("gmail") gmail: RequestBody,
         @Part("nombre_usuario") nombre: RequestBody,

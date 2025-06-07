@@ -41,4 +41,32 @@
     <string name="AcercaDe">Acerca De</string>
     <string name="CerrarSesion">Salir</string>
 
+    <!-- Perfil del usuario -->
+    <string name="Perfil_Titulo">Mi perfil</string>
+    <string name="Perfil_Id">ID de usuario</string>
+    <string name="Perfil_Alias">Alias</string>
+    <string name="Perfil_Gmail">Correo electrónico</string>
+    <string name="Perfil_Nombre">Nombre</string>
+    <string name="Perfil_Apellido">Apellido</string>
+    <string name="Perfil_Telefono">Teléfono</string>
+    <string name="Perfil_Contrasena">Contraseña</string>
+    <string name="Perfil_Imagen">Imagen de perfil</string>
+    <string name="Perfil_FechaRegistro">Fecha de registro</string>
+    <string name="Perfil_GuardarCambios">Guardar cambios</string>
+    <string name="Perfil_Editar">Editar perfil</string>
+    <string name="Perfil_Actualizar">Actualizar</string>
+    <string name="Perfil_CambiarContrasena">Cambiar Contraseña</string>
+
+    <!-- Imagen de perfil -->
+    <string name="Perfil_BtnElegirImagenDe">Elegir imagen desde</string>
+    <string name="Perfil_BtnActualizarImagen">Actualizar imagen</string>
+
+    <!-- Cambio de contraseña -->
+    <string name="Perfil_ActualPassTXT">Contraseña actual:</string>
+    <string name="Perfil_ActualPass">--</string>
+    <string name="Perfil_EtActualPass">Contraseña actual</string>
+    <string name="Perfil_EtNuevoPass">Nueva contraseña</string>
+    <string name="Perfil_EtRNuevoPass">Repetir nueva contraseña</string>
+    <string name="Perfil_BtnActualizarPass">Actualizar contraseña</string>
+
 </resources>

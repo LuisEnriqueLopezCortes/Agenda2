@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,142 @@
     android:layout_height="match_parent"
     tools:context=".Perfil.Perfil_Usuario">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Portada - Imagen de perfil-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--Portada-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/portada"/>
+
+            <!--Imagen de perfil-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Imagen_Perfil"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="#354f60"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagen_perfil_usuario"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Editar_imagen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="230dp"
+                android:src="@drawable/editar_imagen_perfil"/>
+
+        </RelativeLayout>
+
+        <!--Datos del usuario-->
+        <!-- Datos del usuario -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Correo (solo visual) -->
+            <TextView
+                android:id="@+id/Perfil_Gmail"
+                android:text="@string/Perfil_Gmail"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- UID (solo visual) -->
+            <TextView
+                android:id="@+id/Perfil_Id"
+                android:text="@string/Perfil_Id"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:drawableStart="@drawable/icono_nombres"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Nombre -->
+            <EditText
+                android:id="@+id/Perfil_Nombre"
+                android:hint="@string/Perfil_Nombre"
+                android:inputType="textPersonName"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Apellido -->
+            <EditText
+                android:id="@+id/Perfil_Apellido"
+                android:hint="@string/Perfil_Apellido"
+                android:inputType="textPersonName"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Alias -->
+            <EditText
+                android:id="@+id/Perfil_Alias"
+                android:hint="@string/Perfil_Alias"
+                android:inputType="textPersonName"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Teléfono editable con ícono -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/Perfil_Telefono"
+                    android:hint="@string/Perfil_Telefono"
+                    android:inputType="phone"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!-- Botón para cambiar contraseña -->
+            <Button
+                android:id="@+id/Perfil_CambiarContrasena"
+                android:text="@string/Perfil_CambiarContrasena"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+            <!-- Guardar cambios -->
+            <Button
+                android:id="@+id/Perfil_GuardarCambios"
+                android:text="@string/Perfil_GuardarCambios"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
